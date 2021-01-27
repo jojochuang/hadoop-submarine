@@ -137,6 +137,7 @@
     <plugin.failsafe.version>2.17</plugin.failsafe.version>
     <!--  embedded-ldap-junit  -->
     <embedded-ldap-junit.version>0.7</embedded-ldap-junit.version>
+    <shiro.version>1.7.0</shiro.version>
   </properties>
 
   <modules>
@@ -338,6 +339,11 @@
         <groupId>org.yaml</groupId>
         <artifactId>snakeyaml</artifactId>
         <version>${snakeyaml.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.shiro</groupId>
+        <artifactId>shiro-core</artifactId>
+        <version>${shiro.version}</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
