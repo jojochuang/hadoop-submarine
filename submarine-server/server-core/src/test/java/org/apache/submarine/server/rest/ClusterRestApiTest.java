@@ -58,7 +58,7 @@ public class ClusterRestApiTest {
   private static HashMap<String, Object> meta2 = new HashMap<>();
   private static String nodeName1 = "dummy";
   private static LocalDateTime SERVER_START_TIME1 = LocalDateTime.now();
-  private static LocalDateTime INTP_START_TIME = LocalDateTime.now();
+  private static LocalDateTime INTP_START_TIME = LocalDateTime.of(2021, 01, 27, 18, 17, 19, 450000000);
   private static LocalDateTime LATEST_HEARTBEAT = LocalDateTime.now();
   private static long cpuUsed1 = 20;
   private static long cpuCapacity1 = 40;
@@ -143,7 +143,8 @@ public class ClusterRestApiTest {
     assertEquals(clusterMetas.get(nodeName1).get(ClusterMeta.NODE_NAME),
         result.get(0).get(ClusterMeta.NODE_NAME));
     assertEquals("ONLINE", properties.get("STATUS"));
-    assertEquals(INTP_START_TIME.toString(), properties.get("INTP_START_TIME"));
+    String intp = properties.get("INTP_START_TIME").toString();
+    assertEquals(INTP_START_TIME.toString().substring(0, intp.length()), intp);
     assertEquals(LATEST_HEARTBEAT.toString(), properties.get("LATEST_HEARTBEAT"));
   }
 
