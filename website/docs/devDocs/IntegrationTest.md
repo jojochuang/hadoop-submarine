@@ -38,7 +38,7 @@ Then use this latest code to build a docker image and deploy a submarine system 
 Executing the following command will perform the following actions:
 
 ```
-mvn -Phadoop-2.9 clean package install -DskipTests verify -DskipRat -am -pl submarine-test/test-k8s
+mvn -Phadoop-3.2 clean package install -DskipTests verify -DskipRat -am -pl submarine-test/test-k8s
 ```
 
 1. The submarine project will be compiled and packaged to generate `submarine-dist/target/submarine-<version>.tar.gz`

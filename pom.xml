@@ -345,6 +345,9 @@
   <profiles>
     <profile>
       <id>hadoop-3.2</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <properties>
         <hadoop.version>3.2.1</hadoop.version>
         <jaxb-api.version>2.2.11</jaxb-api.version>
