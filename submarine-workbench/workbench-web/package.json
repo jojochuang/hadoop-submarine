@@ -31,7 +31,7 @@
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "yaml": "^1.10.2",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.11.4"
   },
   "lint-staged": {
     "src/**/*.{js,json,ts,html}": [
